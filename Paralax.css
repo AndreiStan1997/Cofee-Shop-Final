@@ -1,0 +1,24 @@
+body {
+    text-align: left;
+  }
+  
+  .section {
+    height: 85vh;
+    padding: 1em;
+  }
+  .section:nth-of-type(2), .section:nth-of-type(4) {
+    background-color: rgba(133, 133, 133, 0.3);
+  }
+  
+  .parallax-background {
+    position: absolute;
+    width: 30%;
+    z-index: -1;
+    margin-top: -100vh;
+  }
+  .parallax-background h1 {
+    height: 100vh;
+    padding-bottom: 50vh;
+    font-size: 5vmax;
+    opacity: 0.6;
+  }

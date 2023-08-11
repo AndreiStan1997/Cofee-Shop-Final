@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #22c519;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #aa4104;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+#scroll-container {
+  
+  overflow: hidden;
+}
+
+#scroll-text {
+  /* animation properties */
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  
+  -moz-animation: my-animation 15s linear infinite;
+  -webkit-animation: my-animation 15s linear infinite;
+  animation: my-animation 15s linear infinite;
+}
+
+/* for Firefox */
+@-moz-keyframes my-animation {
+  from { -moz-transform: translateX(100%); }
+  to { -moz-transform: translateX(-100%); }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  from { -webkit-transform: translateX(100%); }
+  to { -webkit-transform: translateX(-100%); }
+}
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  right: 0;
+}
+
+.dropdown {
+  position: absolute;
+  display: inline-block;
+  right: 90px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  right: 0;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.icontainer {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="poze6/Coffee Mania.jpeg"><h2></h2>
+  <p>The best espresso cofee in the world !</p>
+  <p>Promotions</p>
+  
+  <div id="scroll-container">
+    <div id="scroll-text">!!! Free transport for products with prices starting from 70$. Order now at 0752164974 !!! <div>
+  </div>
+
+</div>
+
+<div id="navbar">
+  <a class="active" href="Promotions.html">Promotions</a>
+  <a href="Cofee.html">Cofee</a>
+  <a href="Espresso Machines.html">Espresso Machines</a>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Other</button>
+  <div class="dropdown-content">
+  <a href="About.html">About</a>
+  <a href="Contact.html">Contact</a>
+  <a href="Shoping Cart.html">Cart</a>
+  </div>
+</div>
+
+
+
+<div class="content">
+  <h3>Summer Sale</h3>
+  <p>Do not miss our products on sale during this summer !</p>
+  <img src="poze9/Illy Clasico.JPG" alt="Illy" height="150px" width="150px">
+  <br>
+  <p>&#9829; 1094 &#9733; 4.5 <a href="Illy Classico.html">See more</a></p>
+  <br>
+  <img src="poze9/Jacobs Kronung.WEBP" alt="Jacobs" height="150px" width="150px">
+  <br>
+  <p>&#9829; 865 &#9733; 4.0 <a href="Jacobs Classico.html">See more</a></p>
+  <br>
+  <img src="poze9/Kimbo Classico.WEBP" alt="Kimbo" height="150px" width="150px">
+  <br>
+  <p>&#9829; 2023 &#9733; 5.0 <a href="Kimbo Classico.html">See more</a></p>
+  <br>
+  <p>Check out the video below !</p>
+  <br>
+  <iframe width="420" height="315"
+  src="https://www.youtube.com/embed/tgbNymZ7vqY">
+  </iframe>
+  <br>
+  <p>Check out our <a href="Events.html">Events</a></p>
+  <br>
+  <p>Also do not forget to add the <a href="Coupon.html">Coupon</a></p>
+  <br>
+  <p>SIDE PROJECTS</p>
+  <a href="Calculator.html"><button>Calculator</button></a>
+  <a href="Rock Paper Scisors.html"><button>Rock Paper Scisors</button></a>
+  <a href="Tic Tac Toe.html"><button>Tic Tac Toe</button></a>
+  <a href="Chessboard.html"><button>Chessboard</button></a>
+  <a href="Clock.html"><button>Clock</button></a>
+  <a href="To do list.html"><button>To do list</button></a>
+  <a href="SVG.html"><button>SVG</button></a>
+</div>
+
+<script src="Script.js"></script>
+
+</body>
+</html>
